@@ -1,0 +1,105 @@
+[15:44:58] ============================================================
+[15:44:58] AGRI FOUNDATION — PREPROCESSING PIPELINE
+[15:44:58] Started: 2026-06-04 15:44:58
+[15:44:58] ============================================================
+[15:44:58] 
+============================================================
+[15:44:58] STEP 1: HSI PREPROCESSING
+[15:44:58] ============================================================
+[15:44:58] 
+[1A] Crop Variety Dataset
+[15:44:59]   Loaded: X_train(2735, 11, 11, 300), y_train(2735,)
+[15:44:59]   Loaded: X_test(4464, 11, 11, 300),  y_test(4464,)
+[15:44:59]   [CropVar_train] NaN removal: 2735 → 429 samples (2306 removed, 84.3%)
+[15:44:59]   [CropVar_test] NaN removal: 4464 → 950 samples (3514 removed, 78.7%)
+[15:44:59]   [CropVar_train] Interpolating bands: 300 → 282
+[15:44:59]   [CropVar_test] Interpolating bands: 300 → 282
+[15:45:00]   [CropVar_train] Normalising (minmax)...
+[15:45:00]   [CropVar_test] Normalising (minmax)...
+[15:45:00]   [CropVar_train] Labels: [0, 1, 2, 3, 4] (0-indexed), counts: {0: 89, 1: 99, 2: 113, 3: 83, 4: 45}
+[15:45:00]   [CropVar_test] Labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (0-indexed), counts: {0: 3, 1: 16, 2: 317, 3: 193, 4: 269, 5: 36, 6: 24, 7: 54, 8: 34, 9: 4}
+[15:45:00]   ✓ Saved: cv_X_train(429, 11, 11, 282), cv_X_test(950, 11, 11, 282)
+[15:45:00] 
+[1B] Groundnut Water Stress
+[15:45:00]   Loaded: X_gn(16667, 300), y_gn(16667,)
+[15:45:00]   Classes: WW(1)=7954, WS(2)=8713
+[15:45:00]   [Groundnut] NaN removal: 16667 → 16667 samples (0 removed, 0.0%)
+[15:45:00]   [Groundnut] Interpolating bands: 300 → 282
+[15:45:00]   [Groundnut] Normalising (minmax)...
+[15:45:00]   Reshaped flat spectra → patches: (16667, 1, 1, 282)
+[15:45:00]   [Groundnut] Labels: [0, 1] (0-indexed), counts: {0: 7954, 1: 8713}
+[15:45:01]   ✓ Saved: gn_X_flat(16667, 282), gn_X_patch(16667, 1, 1, 282)
+[15:45:01] 
+[1C] Pearl Millet Water Stress
+[15:45:01]   Loaded: X_pm(3150, 11, 11, 282), y_pm(3150,)
+[15:45:01]   Classes: WW(1)=1400, WS(2)=1750
+[15:45:02]   [PearlMillet] NaN removal: 3150 → 725 samples (2425 removed, 77.0%)
+[15:45:02]   [PearlMillet] Normalising (minmax)...
+[15:45:02]   [PearlMillet] Labels: [0, 1] (0-indexed), counts: {0: 685, 1: 40}
+[15:45:02]   ✓ Saved: pm_X(725, 11, 11, 282)
+[15:45:02] 
+  ✓ HSI metadata saved
+[15:45:02] 
+============================================================
+[15:45:02] STEP 2: MULTISPECTRAL PREPROCESSING
+[15:45:02] ============================================================
+[15:45:02] 
+[2A] Maize Multispectral
+[15:45:02]   Season folders: ['maize_season4_RededgeMultispectral_20200125_10m_flight1']
+[15:45:02]   Processing season: maize_season4_RededgeMultispectral_20200125_10m_flight1
+[15:45:12]   Stacked 302 images, shape sample: (960, 1280, 5)
+[15:45:25]   ✓ Saved uniform stack: (302, 960, 1280, 5) → /home/sharon/agri_foundation/data/processed/ms/maize/maize_season4_RededgeMultispectral_20200125_10m_flight1/ms_stacked.npy
+[15:45:25] 
+[2B] Paddy Multispectral
+[15:45:25]   Season folders: ['paddy_season4_RededgeMultispectral_20190917_05m']
+[15:45:25]   Processing season: paddy_season4_RededgeMultispectral_20190917_05m
+[15:45:35]   Stacked 315 images, shape sample: (960, 1280, 5)
+[15:45:49]   ✓ Saved uniform stack: (315, 960, 1280, 5) → /home/sharon/agri_foundation/data/processed/ms/paddy/paddy_season4_RededgeMultispectral_20190917_05m/ms_stacked.npy
+[15:45:49] 
+  ✓ MS metadata saved
+[15:45:49] 
+============================================================
+[15:45:49] STEP 3: RGB PREPROCESSING
+[15:45:49] ============================================================
+[15:45:49] 
+[3A] RGB Paddy train
+[15:45:49]   Found 1534 images
+[15:46:04]   Successfully loaded: 1534 images
+[15:46:04]   Point annotations: min=0, max=0, mean=0.0
+[15:46:04]   Images with labels: 0/1534
+[15:46:04]   Image sizes: {(850, 1150): 1534}
+[15:46:24]   ✓ Saved uniform images: (1534, 850, 1150, 3)
+[15:46:24] 
+[3B] RGB Paddy test
+[15:46:24]   Found 385 images
+[15:46:28]   Successfully loaded: 385 images
+[15:46:28]   Point annotations: min=0, max=0, mean=0.0
+[15:46:28]   Images with labels: 0/385
+[15:46:28]   Image sizes: {(850, 1150): 385}
+[15:46:32]   ✓ Saved uniform images: (385, 850, 1150, 3)
+[15:46:32] 
+  ✓ RGB metadata saved
+[15:46:32] 
+============================================================
+[15:46:32] STEP 4: CREATING UNIFIED DATASET MANIFEST
+[15:46:32] ============================================================
+[15:46:32]   ✓ Manifest saved to: processed/metadata/dataset_manifest.json
+[15:46:32] 
+────────────────────────────────────────────────────────────
+[15:46:32]   PREPROCESSING SUMMARY
+[15:46:32] ────────────────────────────────────────────────────────────
+[15:46:32]   Dataset                           Samples                Shape
+[15:46:32] ────────────────────────────────────────────────────────────
+[15:46:32]   HSI Crop Variety (train)              429        (N,11,11,282)
+[15:46:32]   HSI Crop Variety (test)               950        (N,11,11,282)
+[15:46:32]   HSI Groundnut (flat)                16667              (N,282)
+[15:46:32]   HSI Groundnut (patch)               16667          (N,1,1,282)
+[15:46:32]   HSI Pearl Millet                      725        (N,11,11,282)
+[15:46:32]   RGB Paddy (train)                    1534            (N,H,W,3)
+[15:46:32]   RGB Paddy (test)                      385            (N,H,W,3)
+[15:46:32] ────────────────────────────────────────────────────────────
+[15:46:32] 
+============================================================
+[15:46:32] PREPROCESSING COMPLETE: 15:46:32
+[15:46:32] Output: /home/sharon/agri_foundation/data/processed
+[15:46:32] ============================================================

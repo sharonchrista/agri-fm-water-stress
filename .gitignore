@@ -1,0 +1,128 @@
+# =============================================================
+# agri-fm-water-stress .gitignore
+# =============================================================
+
+# ----- Large data files -----
+data/
+!data/README_data.md
+
+# ----- Pretrained model weights (too large for GitHub) -----
+models/
+!models/README_models.md
+
+# ----- Experiment checkpoints -----
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.ckpt
+!checkpoints/.gitkeep
+
+# ----- Logs and results -----
+logs/*.log
+logs/*.json
+logs/*.csv
+!logs/.gitkeep
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ----- Virtual environments -----
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# ----- Jupyter Notebooks -----
+.ipynb_checkpoints/
+*.ipynb
+
+# ----- PyTorch -----
+*.pt
+*.pth
+*.ckpt
+*.pkl
+
+# ----- NumPy / data arrays -----
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mat
+
+# ----- Images (generated figures go in figures/ which IS tracked) -----
+# Only ignore bulk image dumps, not the paper figures
+**/temp_figs/
+**/debug_imgs/
+
+# ----- LaTeX auxiliary files -----
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.pdf
+# Keep the source files
+!paper/main.tex
+!paper/references.bib
+
+# ----- OS files -----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ----- IDE files -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ropeproject
+
+# ----- SLURM / HPC job files -----
+*.slurm
+*.sbatch
+slurm-*.out
+nohup.out
+
+# ----- Weights and Biases -----
+wandb/
+
+# ----- MLflow -----
+mlruns/
+
+# ----- Temporary files -----
+tmp/
+temp/
+scratch/
+*.tmp
+*.bak
+*.orig

@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+  File "/home/sharon/agri_foundation/encoders/sam2_encoder.py", line 454, in test_encoder
+    embs = encoder.encode_batch(x_np, batch_size=4)
+  File "/home/sharon/agri_foundation/encoders/sam2_encoder.py", line 248, in encode_batch
+    emb = self.forward(batch_t)
+  File "/home/sharon/agri_foundation/encoders/sam2_encoder.py", line 220, in forward
+    return self.fallback_encoder(x_norm)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 2 has a total capacity of 14.56 GiB of which 201.88 MiB is free. Process 687665 has 13.86 GiB memory in use. Including non-PyTorch memory, this process has 496.00 MiB memory in use. Of the allocated memory 187.59 MiB is allocated by PyTorch, and 178.41 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+==================================================
+SAM2 Encoder — Quick Test
+==================================================
+Device: cuda:2
+[SAM2] SAM2 load failed: Cannot find primary config 'sam2.1/sam2.1_hiera_l.yaml'. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=pkg://sam2
+	provider=schema, path=structured://
+[SAM2] SAM v1 load failed: No module named 'segment_anything'
+[SAM2] No SAM weights found — using fallback CNN encoder
+  Expected: /home/sharon/agri_foundation/weights/sam2/sam2.1_hiera_large.pt
+
+Total params    : 17,855,040
+Trainable params: 17,855,040
+
+Input  (2, 3, 224, 224) → embedding (2, 512)
+Input  (1, 3, 850, 1150) → embedding (1, 512)
+
+Testing numpy batch encoding...

@@ -1,0 +1,204 @@
+==============================================
+ AGRI FOUNDATION — Deep Inspection
+ Thu 04 Jun 2026 03:32:03 PM IST
+==============================================
+
+>>> FIX: RE-EXTRACTING GROUNDNUT ZIP
+----------------------------------------------
+✗ Still failed
+Groundnut folder after extraction:
+/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/Read me.docx
+/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/X_GN_31Dec.npy
+/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/y_GN_31Dec.npy
+Size: 39M	/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/
+
+>>> MULTISPECTRAL DEEP INSPECTION
+----------------------------------------------
+--- Top-level crop/season folders ---
+/home/sharon/agri_foundation/data/multispectral/raw/Agri
+/home/sharon/agri_foundation/data/multispectral/raw/Agri/Maize
+/home/sharon/agri_foundation/data/multispectral/raw/Agri/Paddy
+
+--- All unique crop types ---
+Agri
+Maize
+Paddy
+
+--- Season/flight folders per crop ---
+/home/sharon/agri_foundation/data/multispectral/raw/Agri
+/home/sharon/agri_foundation/data/multispectral/raw/Agri/Maize
+/home/sharon/agri_foundation/data/multispectral/raw/Agri/Maize/maize_season4_RededgeMultispectral_20200125_10m_flight1
+/home/sharon/agri_foundation/data/multispectral/raw/Agri/Paddy
+/home/sharon/agri_foundation/data/multispectral/raw/Agri/Paddy/paddy_season4_RededgeMultispectral_20190917_05m
+
+--- Date/season summary (from folder names) ---
+20190917
+20200125
+
+--- Count of images per band ---
+Band 1 (Blue):    617
+Band 2 (Green):   617
+Band 3 (Red):     617
+Band 4 (RedEdge): 617
+Band 5 (NIR):     617
+
+--- Sample single image metadata (rasterio) ---
+Sample file: /home/sharon/agri_foundation/data/multispectral/raw/Agri/Maize/maize_season4_RededgeMultispectral_20200125_10m_flight1/000/IMG_0121_1.tif
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+  Shape: 960 x 1280
+  Bands: 1
+  CRS: None
+  Resolution: (1.0, 1.0)
+  Dtype: ('uint16',)
+  Bounds: BoundingBox(left=0.0, bottom=960.0, right=1280.0, top=0.0)
+  Tags (first 10): {'TIFFTAG_SOFTWARE': 'v3.4.3', 'TIFFTAG_DATETIME': '2020:01:24 06:16:53'}
+
+>>> RGB PADDY DEEP INSPECTION
+----------------------------------------------
+--- Train folder contents ---
+/home/sharon/agri_foundation/data/rgb_paddy/train
+/home/sharon/agri_foundation/data/rgb_paddy/train/train
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/labels
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_27_patch_1_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_155_patch_1_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_92_patch_1_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_106_patch_3_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_77_patch_1_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_140_patch_3_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_38_patch_1_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_125_patch_0_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_68_patch_3_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_107_patch_1_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_52_patch_0_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_90_patch_2_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_32_patch_0_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_37_patch_0_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_9_patch_0_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_121_patch_1_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_63_patch_1_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_37_patch_2_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_13_patch_0_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/train/train/images/IMG_109_patch_3_0.jpg
+
+--- Test folder contents ---
+/home/sharon/agri_foundation/data/rgb_paddy/test
+/home/sharon/agri_foundation/data/rgb_paddy/test/test
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/labels
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_161_patch_2_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_60_patch_1_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_139_patch_0_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_30_patch_2_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_94_patch_1_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_150_patch_1_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_115_patch_3_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_123_patch_1_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_41_patch_0_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_63_patch_3_0.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_93_patch_3_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_119_patch_1_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_1_patch_3_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_104_patch_3_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_10_patch_2_3.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_8_patch_0_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_26_patch_2_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_28_patch_1_1.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_76_patch_0_2.jpg
+/home/sharon/agri_foundation/data/rgb_paddy/test/test/images/IMG_72_patch_3_3.jpg
+
+--- Train image count ---
+1534
+0
+
+--- Test image count ---
+385
+0
+
+--- Label format: sample .txt file ---
+File: /home/sharon/agri_foundation/data/rgb_paddy/train/train/labels/IMG_48_patch_0_2.txt
+Content:
+904.0 436.0
+719.0 145.0
+876.0 318.0
+967.0 241.0
+
+--- Classes: unique class IDs in labels ---
+     85 978.0
+     83 510.0
+     80 672.0
+     80 630.0
+     79 884.0
+     79 121.0
+     79 1037.0
+     78 882.0
+     76 863.0
+     76 782.0
+
+--- Sample image dimensions ---
+  [train] Sample: IMG_27_patch_1_3.jpg | Size: (1150, 850) | Mode: RGB | Total: 1534
+  [test] Sample: IMG_161_patch_2_1.jpg | Size: (1150, 850) | Mode: RGB | Total: 385
+
+>>> HYPERSPECTRAL DEEP INSPECTION
+----------------------------------------------
+
+--- Subset: crop_variety ---
+/home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/X_test.npy
+/home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/X_train.npy
+/home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/y_test.npy
+/home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/y_train.npy
+
+  .npy file: /home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/X_test.npy
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/numpy/_core/_methods.py:135: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/numpy/_core/_methods.py:135: RuntimeWarning: invalid value encountered in reduce
+  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
+  Shape: (4464, 11, 11, 300)
+  Dtype: float64
+  Min: nan, Max: nan, Mean: nan
+
+  All files in subset:
+-rw-rw-r-- 1 sharon sharon 1.3G Jun  2 04:53 /home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/X_test.npy
+-rw-rw-r-- 1 sharon sharon 35K Jun  2 05:01 /home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/y_test.npy
+-rw-rw-r-- 1 sharon sharon 22K Jun  2 05:01 /home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/y_train.npy
+-rw-rw-r-- 1 sharon sharon 758M Jun  2 04:58 /home/sharon/agri_foundation/data/hyperspectral/crop_variety/Crop_dataset/X_train.npy
+
+--- Subset: groundnut_stress ---
+/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/Read me.docx
+/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/X_GN_31Dec.npy
+/home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/y_GN_31Dec.npy
+
+  .npy file: /home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/X_GN_31Dec.npy
+  Shape: (16667, 300)
+  Dtype: float64
+  Min: 0.0158, Max: 0.6772, Mean: 0.2084
+  Interpretation: 2D array — could be label/mask or single band
+
+  All files in subset:
+-rw-rw-r-- 1 sharon sharon 9.0K May 20  2024 /home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/Read me.docx
+-rw-rw-r-- 1 sharon sharon 39M Jan 12  2023 /home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/X_GN_31Dec.npy
+-rw-rw-r-- 1 sharon sharon 131K Jan 12  2023 /home/sharon/agri_foundation/data/hyperspectral/groundnut_stress/GROUNDNUT WATER STRESS DATA/y_GN_31Dec.npy
+
+--- Subset: pearl_millet_stress ---
+
+
+  All files in subset:
+
+>>> DATASET SUMMARY
+----------------------------------------------
+
+Dataset                      Files       Size
+------------------------------------------------
+RGB Paddy Train               1534     231.1M
+RGB Paddy Test                 385      57.7M
+RGB Labels (txt)              1922       0.7M
+MS Band 1 (Blue)               617    1521.1M
+MS Band 5 (NIR)                617    1521.1M
+HSI Crop Variety                 4    2090.6M
+HSI Groundnut                    2      40.1M
+HSI Pearl Millet                 0       0.0M
+
+==============================================
+ DEEP INSPECTION COMPLETE — Thu 04 Jun 2026 03:32:09 PM IST
+==============================================

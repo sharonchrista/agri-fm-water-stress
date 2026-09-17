@@ -1,0 +1,26 @@
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+==================================================
+SpectralGPT Encoder — Quick Test
+==================================================
+Device: cuda:0
+[SpectralGPT] No pretrained weights found — using random init
+  Download from: https://huggingface.co/danfenghong/SpectralGPT
+  Save to: /home/sharon/agri_foundation/weights/spectralgpt/SpectralGPT.pth
+[SpectralGPT] Backbone frozen (head trainable)
+
+Total params    : 4,872,448
+Trainable params: 132,608
+
+Flat input  (32, 282) → embedding (32, 512)
+Patch input (16, 11, 11, 282) → embedding (16, 512)
+GN input    (64, 1, 1, 282) → embedding (64, 512)
+
+Embedding stats: mean=0.0000, std=0.9998
+Embedding range: [-1.3191, 6.2652]
+
+Testing numpy batch encoding...
+  Encoded 32/100
+Numpy input (100, 11, 11, 282) → (100, 512)
+
+✓ All tests passed

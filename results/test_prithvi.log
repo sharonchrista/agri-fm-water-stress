@@ -1,0 +1,24 @@
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+==================================================
+Prithvi Encoder — Quick Test
+==================================================
+Device: cuda:1
+[Prithvi] Loading from local: /home/sharon/agri_foundation/weights/prithvi
+[Prithvi] HuggingFace load failed: 'NoneType' object cannot be interpreted as an integer
+[Prithvi] Loaded weights from /home/sharon/agri_foundation/weights/prithvi/Prithvi_EO_V2_300M.pt (missing: 82)
+[Prithvi] Backbone frozen
+
+Total params    : 19,410,075
+Trainable params: 155
+
+Input  (4, 5, 64, 64) → embedding (4, 512)
+Input  (2, 5, 128, 128) → embedding (2, 512)
+
+Band adapter: (1, 5, 64, 64) → (1, 6, 64, 64)
+
+Testing numpy batch encoding...
+  Encoded 8/20  Encoded 16/20  Encoded 20/20
+Numpy input (20, 64, 64, 5) → (20, 512)
+
+✓ All tests passed

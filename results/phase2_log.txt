@@ -1,0 +1,171 @@
+==============================================
+ AGRI FOUNDATION — Phase 2: Encoders
+ Thu 04 Jun 2026 04:02:49 PM IST
+==============================================
+cp: cannot stat 'spectralgpt_encoder.py': No such file or directory
+cp: cannot stat 'prithvi_encoder.py': No such file or directory
+cp: cannot stat 'sam2_encoder.py': No such file or directory
+✓ Encoder files copied to ~/agri_foundation/encoders/
+
+>>> WEIGHTS CHECK
+----------------------------------------------
+/home/sharon/agri_foundation/weights/groundingdino/groundingdino_swint_ogc.pth
+/home/sharon/agri_foundation/weights/prithvi/assets/model_architecture.png
+/home/sharon/agri_foundation/weights/prithvi/assets/overall_v2_300.png
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/CACHEDIR.TAG
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/assets/model_architecture.png.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/assets/overall_v2_300.png.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/config.json.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/examples/Mexico_HLS.S30.T13REM.2018026T173609.v2.0_cropped.tif.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/examples/Mexico_HLS.S30.T13REM.2018106T172859.v2.0_cropped.tif.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/examples/Mexico_HLS.S30.T13REM.2018201T172901.v2.0_cropped.tif.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/examples/Mexico_HLS.S30.T13REM.2018266T173029.v2.0_cropped.tif.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/.gitattributes.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/inference.py.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/Prithvi_EO_V2_300M.pt.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/prithvi_mae.py.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/README.md.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/download/requirements.txt.metadata
+/home/sharon/agri_foundation/weights/prithvi/.cache/huggingface/.gitignore
+/home/sharon/agri_foundation/weights/prithvi/config.json
+/home/sharon/agri_foundation/weights/prithvi/examples/Mexico_HLS.S30.T13REM.2018026T173609.v2.0_cropped.tif
+/home/sharon/agri_foundation/weights/prithvi/examples/Mexico_HLS.S30.T13REM.2018106T172859.v2.0_cropped.tif
+/home/sharon/agri_foundation/weights/prithvi/examples/Mexico_HLS.S30.T13REM.2018201T172901.v2.0_cropped.tif
+/home/sharon/agri_foundation/weights/prithvi/examples/Mexico_HLS.S30.T13REM.2018266T173029.v2.0_cropped.tif
+/home/sharon/agri_foundation/weights/prithvi/.gitattributes
+/home/sharon/agri_foundation/weights/prithvi/inference.py
+/home/sharon/agri_foundation/weights/prithvi/Prithvi_EO_V2_300M.pt
+/home/sharon/agri_foundation/weights/prithvi/prithvi_mae.py
+/home/sharon/agri_foundation/weights/prithvi/README.md
+/home/sharon/agri_foundation/weights/prithvi/requirements.txt
+/home/sharon/agri_foundation/weights/sam2/sam2.1_hiera_large.pt
+/home/sharon/agri_foundation/weights/sam2/sam_vit_h_4b8939.pth
+/home/sharon/agri_foundation/weights/spectralgpt/.cache/huggingface/CACHEDIR.TAG
+/home/sharon/agri_foundation/weights/spectralgpt/.cache/huggingface/.gitignore
+
+Weights directory sizes:
+662M	/home/sharon/agri_foundation/weights/groundingdino/
+1.3G	/home/sharon/agri_foundation/weights/prithvi/
+2.4G	/home/sharon/agri_foundation/weights/sam2/
+24K	/home/sharon/agri_foundation/weights/spectralgpt/
+
+>>> DOWNLOADING MISSING WEIGHTS
+----------------------------------------------
+✓ SAM2 weights already present: 0
+✓ Prithvi weights directory not empty
+total 1.3G
+drwxrwxr-x 2 sharon sharon 4.0K Jun  4 15:09 assets
+-rw-rw-r-- 1 sharon sharon  753 Jun  4 15:09 config.json
+drwxrwxr-x 2 sharon sharon 4.0K Jun  4 15:09 examples
+-rw-rw-r-- 1 sharon sharon  16K Jun  4 15:09 inference.py
+✓ SpectralGPT weights directory not empty
+total 0
+✓ GroundingDINO: 662M
+
+>>> RUNNING ENCODER TESTS
+----------------------------------------------
+
+[1/3] SpectralGPT Encoder
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+==================================================
+SpectralGPT Encoder — Quick Test
+==================================================
+Device: cuda:0
+[SpectralGPT] No pretrained weights found — using random init
+  Download from: https://huggingface.co/danfenghong/SpectralGPT
+  Save to: /home/sharon/agri_foundation/weights/spectralgpt/SpectralGPT.pth
+[SpectralGPT] Backbone frozen (head trainable)
+
+Total params    : 4,872,448
+Trainable params: 132,608
+
+Flat input  (32, 282) → embedding (32, 512)
+Patch input (16, 11, 11, 282) → embedding (16, 512)
+GN input    (64, 1, 1, 282) → embedding (64, 512)
+
+Embedding stats: mean=0.0000, std=0.9998
+Embedding range: [-1.3191, 6.2652]
+
+Testing numpy batch encoding...
+  Encoded 32/100
+Numpy input (100, 11, 11, 282) → (100, 512)
+
+✓ All tests passed
+
+[2/3] Prithvi Encoder
+/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+==================================================
+Prithvi Encoder — Quick Test
+==================================================
+Device: cuda:1
+[Prithvi] Loading from local: /home/sharon/agri_foundation/weights/prithvi
+[Prithvi] HuggingFace load failed: 'NoneType' object cannot be interpreted as an integer
+[Prithvi] Loaded weights from /home/sharon/agri_foundation/weights/prithvi/Prithvi_EO_V2_300M.pt (missing: 82)
+[Prithvi] Backbone frozen
+
+Total params    : 19,410,075
+Trainable params: 155
+
+Input  (4, 5, 64, 64) → embedding (4, 512)
+Input  (2, 5, 128, 128) → embedding (2, 512)
+
+Band adapter: (1, 5, 64, 64) → (1, 6, 64, 64)
+
+Testing numpy batch encoding...
+  Encoded 8/20  Encoded 16/20  Encoded 20/20
+Numpy input (20, 64, 64, 5) → (20, 512)
+
+✓ All tests passed
+
+[3/3] SAM2 Encoder
+Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+  File "/home/sharon/agri_foundation/encoders/sam2_encoder.py", line 454, in test_encoder
+    embs = encoder.encode_batch(x_np, batch_size=4)
+  File "/home/sharon/agri_foundation/encoders/sam2_encoder.py", line 248, in encode_batch
+    emb = self.forward(batch_t)
+  File "/home/sharon/agri_foundation/encoders/sam2_encoder.py", line 220, in forward
+    return self.fallback_encoder(x_norm)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/sharon/miniconda3/envs/agri-foundation/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 2 has a total capacity of 14.56 GiB of which 201.88 MiB is free. Process 687665 has 13.86 GiB memory in use. Including non-PyTorch memory, this process has 496.00 MiB memory in use. Of the allocated memory 187.59 MiB is allocated by PyTorch, and 178.41 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+==================================================
+SAM2 Encoder — Quick Test
+==================================================
+Device: cuda:2
+[SAM2] SAM2 load failed: Cannot find primary config 'sam2.1/sam2.1_hiera_l.yaml'. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=pkg://sam2
+	provider=schema, path=structured://
+[SAM2] SAM v1 load failed: No module named 'segment_anything'
+[SAM2] No SAM weights found — using fallback CNN encoder
+  Expected: /home/sharon/agri_foundation/weights/sam2/sam2.1_hiera_large.pt
+
+Total params    : 17,855,040
+Trainable params: 17,855,040
+
+Input  (2, 3, 224, 224) → embedding (2, 512)
+Input  (1, 3, 850, 1150) → embedding (1, 512)
+
+Testing numpy batch encoding...
+
+==============================================
+ ENCODER TESTS COMPLETE — Thu 04 Jun 2026 04:03:04 PM IST
+ Logs: ~/agri_foundation/results/test_*.log
+==============================================

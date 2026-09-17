@@ -1,0 +1,150 @@
+[15:51:21] ============================================================
+[15:51:21] AGRI FOUNDATION — PREPROCESSING PIPELINE v2
+[15:51:21] Started: 2026-06-04 15:51:21
+[15:51:21] ============================================================
+[15:51:21] 
+============================================================
+[15:51:21] STEP 1: HSI PREPROCESSING
+[15:51:21] ============================================================
+[15:51:21] 
+[1A] Crop Variety (10 classes, 300 bands)
+[15:51:22]   Loaded: X_train(2735, 11, 11, 300), X_test(4464, 11, 11, 300)
+[15:51:23]   [CropVar_train] NaN diagnostics:
+[15:51:23]     Samples with ANY NaN : 44842/330935 (13.6%)
+[15:51:23]     Bands with NaN       : 300/300
+[15:51:23]     First 10 band NaN ct : [161, 175, 143, 171, 162, 185, 143, 190, 171, 170]
+[15:51:23]     Last  10 band NaN ct : [162, 141, 177, 143, 154, 150, 172, 185, 156, 142]
+[15:51:23]     NaN per affected smp : min=1, max=7, mean=1.1
+[15:51:24]   [CropVar_test] NaN diagnostics:
+[15:51:24]     Samples with ANY NaN : 67567/540144 (12.5%)
+[15:51:24]     Bands with NaN       : 300/300
+[15:51:24]     First 10 band NaN ct : [272, 250, 255, 237, 287, 229, 238, 245, 277, 254]
+[15:51:24]     Last  10 band NaN ct : [243, 250, 250, 262, 240, 254, 252, 279, 285, 277]
+[15:51:24]     NaN per affected smp : min=1, max=62, mean=1.1
+[15:51:28]   [CropVar_train] Imputation complete:
+[15:51:28]     Clean (no NaN)     : 286093/330935 (86.4%)
+[15:51:28]     Spectral interp    : 44842/330935 (13.6%)
+[15:51:28]     Band mean fallback : 0/330935 (0.0%)
+[15:51:28]     ✓ No NaN values remain
+[15:51:35]   [CropVar_test] Imputation complete:
+[15:51:35]     Clean (no NaN)     : 472577/540144 (87.5%)
+[15:51:35]     Spectral interp    : 67567/540144 (12.5%)
+[15:51:35]     Band mean fallback : 0/540144 (0.0%)
+[15:51:35]     ✓ No NaN values remain
+[15:51:36]   After imputation: X_train(2735, 11, 11, 300), X_test(4464, 11, 11, 300)
+[15:51:36]   [CropVar_train] Resampling bands: 300 → 282
+[15:51:38]   [CropVar_test] Resampling bands: 300 → 282
+[15:51:42]   [CropVar_train] Normalising (minmax)...
+[15:51:43]   [CropVar_test] Normalising (minmax)...
+[15:51:44]   [CropVar_train] Labels 0-indexed: classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], counts={0: 311, 1: 317, 2: 394, 3: 315, 4: 315, 5: 204, 6: 116, 7: 307, 8: 157, 9: 299}
+[15:51:44]   [CropVar_test] Labels 0-indexed: classes=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], counts={0: 362, 1: 868, 2: 958, 3: 523, 4: 821, 5: 100, 6: 61, 7: 170, 8: 115, 9: 486}
+[15:51:45]   ✓ Saved: cv_X_train(2735, 11, 11, 282), cv_X_test(4464, 11, 11, 282)
+[15:51:45] 
+[1B] Groundnut Water Stress (binary, 300 bands, flat)
+[15:51:45]   Loaded: X_gn(16667, 300)
+[15:51:45]   Classes: WW=7954, WS=8713
+[15:51:45]   [Groundnut] NaN diagnostics:
+[15:51:45]     Samples with ANY NaN : 0/16667 (0.0%)
+[15:51:45]     Bands with NaN       : 0/300
+[15:51:45]     First 10 band NaN ct : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[15:51:45]     Last  10 band NaN ct : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[15:51:45]   [Groundnut] Imputation complete:
+[15:51:45]     Clean (no NaN)     : 16667/16667 (100.0%)
+[15:51:45]     Spectral interp    : 0/16667 (0.0%)
+[15:51:45]     Band mean fallback : 0/16667 (0.0%)
+[15:51:45]     ✓ No NaN values remain
+[15:51:45]   [Groundnut] Resampling bands: 300 → 282
+[15:51:45]   [Groundnut] Normalising (minmax)...
+[15:51:45]   [Groundnut] Labels 0-indexed: classes=[0, 1], counts={0: 7954, 1: 8713}
+[15:51:45]   ✓ Saved: gn_X_flat(16667, 282), gn_X_patch(16667, 1, 1, 282)
+[15:51:45] 
+[1C] Pearl Millet Water Stress (binary, 282 bands, patches)
+[15:51:45]   Loaded: X_pm(3150, 11, 11, 282)
+[15:51:45]   Classes: WW=1400, WS=1750
+[15:51:46]   [PearlMillet] NaN diagnostics:
+[15:51:46]     Samples with ANY NaN : 52639/381150 (13.8%)
+[15:51:46]     Bands with NaN       : 282/282
+[15:51:46]     First 10 band NaN ct : [198, 203, 199, 212, 213, 189, 230, 240, 215, 181]
+[15:51:46]     Last  10 band NaN ct : [199, 233, 211, 196, 217, 189, 220, 205, 225, 200]
+[15:51:46]     NaN per affected smp : min=1, max=4, mean=1.1
+[15:51:51]   [PearlMillet] Imputation complete:
+[15:51:51]     Clean (no NaN)     : 328511/381150 (86.2%)
+[15:51:51]     Spectral interp    : 52639/381150 (13.8%)
+[15:51:51]     Band mean fallback : 0/381150 (0.0%)
+[15:51:51]     ✓ No NaN values remain
+[15:51:51]   [PearlMillet] Normalising (minmax)...
+[15:51:52]   [PearlMillet] Labels 0-indexed: classes=[0, 1], counts={0: 1400, 1: 1750}
+[15:51:52]   ✓ Saved: pm_X(3150, 11, 11, 282)
+[15:51:52] 
+  ✓ HSI metadata saved
+[15:51:52] 
+============================================================
+[15:51:52] STEP 2: MULTISPECTRAL PREPROCESSING (skipping re-stack — already done)
+[15:51:52] ============================================================
+[15:51:52]   MS stacks already saved in v1 — loading and verifying only
+[15:51:54]   ✓ maize/maize_season4_RededgeMultispectral_20200125_10m_flight1: (302, 960, 1280, 5) (min=0.0752, max=0.9998)
+[15:51:57]     NaN values: 0
+[15:51:59]   ✓ paddy/paddy_season4_RededgeMultispectral_20190917_05m: (315, 960, 1280, 5) (min=0.0518, max=0.9998)
+[15:52:01]     NaN values: 0
+[15:52:01]   ✓ MS metadata saved
+[15:52:01] 
+============================================================
+[15:52:01] STEP 3: RGB PREPROCESSING
+[15:52:01] ============================================================
+[15:52:01] 
+  Discovering label file locations...
+[15:52:01]   Total .txt files found: 1922
+[15:52:01]   Sample label paths:
+[15:52:01]     /home/sharon/agri_foundation/data/rgb_paddy/train/train/labels/IMG_48_patch_0_2.txt
+[15:52:01]     /home/sharon/agri_foundation/data/rgb_paddy/train/train/labels/IMG_79_patch_2_2.txt
+[15:52:01]     /home/sharon/agri_foundation/data/rgb_paddy/train/train/labels/IMG_152_patch_0_3.txt
+[15:52:01]     /home/sharon/agri_foundation/data/rgb_paddy/train/train/labels/IMG_83_patch_0_3.txt
+[15:52:01]     /home/sharon/agri_foundation/data/rgb_paddy/train/train/labels/IMG_43_patch_1_3.txt
+[15:52:01] 
+  Sample label content (IMG_48_patch_0_2.txt):
+[15:52:01]     904.0 436.0
+[15:52:01]     719.0 145.0
+[15:52:01]     876.0 318.0
+[15:52:01]     967.0 241.0
+[15:52:01] 
+[3A] RGB Paddy train
+[15:52:01]   Found 1534 images
+[15:52:19]   Loaded: 1534 images
+[15:52:19]   Labels matched: 1534/1534
+[15:52:19]   Points/image: min=1, max=195, mean=33.1
+[15:52:19]   Images with ≥1 point: 1534
+[15:52:19]   Image sizes: {(850, 1150): 1534}
+[15:52:42]   ✓ Saved uniform images: (1534, 850, 1150, 3)
+[15:52:42] 
+[3B] RGB Paddy test
+[15:52:42]   Found 385 images
+[15:52:46]   Loaded: 385 images
+[15:52:46]   Labels matched: 385/385
+[15:52:46]   Points/image: min=1, max=192, mean=30.3
+[15:52:46]   Images with ≥1 point: 385
+[15:52:46]   Image sizes: {(850, 1150): 385}
+[15:52:51]   ✓ Saved uniform images: (385, 850, 1150, 3)
+[15:52:51] 
+  ✓ RGB metadata saved
+[15:52:51] 
+============================================================
+[15:52:51] STEP 4: DATASET MANIFEST
+[15:52:51] ============================================================
+[15:52:51] 
+──────────────────────────────────────────────────────────────
+[15:52:51]   Dataset                           Samples              Shape
+[15:52:51] ──────────────────────────────────────────────────────────────
+[15:52:51]   HSI CropVariety train                2735      (N,11,11,282)
+[15:52:51]   HSI CropVariety test                 4464      (N,11,11,282)
+[15:52:51]   HSI Groundnut (flat)                16667            (N,282)
+[15:52:51]   HSI Groundnut (patch)               16667        (N,1,1,282)
+[15:52:51]   HSI Pearl Millet                     3150      (N,11,11,282)
+[15:52:51]   RGB Paddy train                      1534     (N,850,1150,3)
+[15:52:51]   RGB Paddy test                        385     (N,850,1150,3)
+[15:52:51] ──────────────────────────────────────────────────────────────
+[15:52:51]   ✓ Manifest saved
+[15:52:51] 
+============================================================
+[15:52:51] COMPLETE: 15:52:51
+[15:52:51] Output  : /home/sharon/agri_foundation/data/processed
+[15:52:51] ============================================================
