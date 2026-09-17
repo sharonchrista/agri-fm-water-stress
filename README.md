@@ -241,9 +241,7 @@ The pretrained HyperSL and Prithvi-EO-2.0 checkpoints are subject to their respe
 
 ## Acknowledgements
 
-[SEARCH AND ADD: funding acknowledgements]
-
-The authors thank ICRISAT Hyderabad for providing the groundnut hyperspectral dataset, the University of Minnesota for the wheat HSI dataset, and the Zenodo maize dataset contributors for releasing real stress annotations.
+The authors thank TiAND Hyderabad for providing the groundnut hyperspectral dataset, the University of Minnesota for the wheat HSI dataset, and the Zenodo maize dataset contributors for releasing real stress annotations.
 
 ---
 
