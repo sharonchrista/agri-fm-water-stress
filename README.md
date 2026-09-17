@@ -7,8 +7,7 @@
 Official code and pretrained adapters for the paper:
 
 > **Physics-Constrained Few-Shot Multimodal Foundation Models for Cross-Geographic Crop Stress Monitoring: A Multi-Country UAV Benchmark**
-> Sharon Christa, Ram Avtar
-> *Remote Sensing of Environment* (under review)
+> Sharon Christa
 
 ---
 
