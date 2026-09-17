@@ -78,7 +78,7 @@ All datasets used in this study are publicly available. Download instructions ar
 
 | Dataset | Country | Modality | Crop | Source |
 |---|---|---|---|---|
-| Groundnut water stress | India | HSI, 282-band | Groundnut | ICRISAT / TIAND |
+| Groundnut water stress | India | HSI, 282-band | Groundnut | TIAND |
 | UMN wheat | USA | HSI, 190-band | Wheat | UMN Data Repository |
 | Zenodo maize | Turkey | MS, 6-band | Maize | [Zenodo 22062459](https://zenodo.org/records/22062459) |
 | Paddy MS | Sri Lanka | MS, 4-band | Paddy | [Mendeley Data](https://doi.org/10.17632/h8s5mn52j6.1) |
@@ -191,11 +191,11 @@ python generate_figures_6_7.py    # Figures 6 (SHAP) and 7 (density maps)
 
 Pretrained SpectralMLP and DensityNet checkpoints from this study are available for download:
 
-| Checkpoint | Description | Link |
-|---|---|---|
-| `groundnut_mlp_best.pt` | SpectralMLP, epoch 87, 98.41% | [SEARCH AND ADD] |
-| `densitynet_best.pt` | DensityNet, epoch 89, MAE 7.39 | [SEARCH AND ADD] |
-| `gp_hsi_best.pt` | SVGP on HyperSL, ECE 0.0084 | [SEARCH AND ADD] |
+| Checkpoint | Description |
+|---|---|
+| `groundnut_mlp_best.pt` | SpectralMLP, epoch 87, 98.41% | 
+| `densitynet_best.pt` | DensityNet, epoch 89, MAE 7.39 | 
+| `gp_hsi_best.pt` | SVGP on HyperSL, ECE 0.0084 | 
 
 ---
 
