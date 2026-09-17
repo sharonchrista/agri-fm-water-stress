@@ -248,4 +248,4 @@ The authors thank TiAND Hyderabad for providing the groundnut hyperspectral data
 ## Contact
 
 Sharon Christa — MIT Art, Design and Technology University, Pune, India
-sharon@mituniversity.edu.in
+sharon.christa@mituniversity.edu.in
