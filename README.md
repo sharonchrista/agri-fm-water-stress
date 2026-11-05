@@ -213,23 +213,7 @@ All results in the paper can be reproduced by running the scripts in the order a
 
 ---
 
-## Citation
 
-If you use this code or benchmark in your research, please cite:
-
-```bibtex
-@article{christa2025agrifm,
-  author  = {Christa, Sharon and Avtar, Ram},
-  title   = {Physics-Constrained Few-Shot Multimodal Foundation Models
-             for Cross-Geographic Crop Stress Monitoring:
-             A Multi-Country UAV Benchmark},
-  journal = {Remote Sensing of Environment},
-  year    = {2025},
-  note    = {Under review}
-}
-```
-
----
 
 ## License
 
@@ -241,7 +225,7 @@ The pretrained HyperSL and Prithvi-EO-2.0 checkpoints are subject to their respe
 
 ## Acknowledgements
 
-The authors thank TiAND Hyderabad for providing the groundnut hyperspectral dataset, the University of Minnesota for the wheat HSI dataset, and the Zenodo maize dataset contributors for releasing real stress annotations.
+The authors thank TIAND Hyderabad for providing the groundnut hyperspectral dataset, the University of Minnesota for the wheat HSI dataset, and the Zenodo maize dataset contributors for releasing real stress annotations.
 
 ---
 
